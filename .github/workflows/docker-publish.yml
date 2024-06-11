@@ -61,6 +61,7 @@ jobs:
 
       - name: Check PostgreSQL Service
         run: |
+          export PGPASSWORD=makeover
           psql -h localhost -U postgres -d the_library_press -c "SELECT 1;"
 
       - name: Login to Docker Hub
